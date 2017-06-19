@@ -1,0 +1,6 @@
+{
+    "python.promptToInstallJupyter": false,
+    "files.associations": {
+        "memory": "cpp"
+    }
+}
