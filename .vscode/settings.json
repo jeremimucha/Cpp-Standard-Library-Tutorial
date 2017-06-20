@@ -1,6 +1,9 @@
 {
     "python.promptToInstallJupyter": false,
     "files.associations": {
-        "memory": "cpp"
+        "memory": "cpp",
+        "random": "cpp",
+        "xlocale": "cpp",
+        "ostream": "cpp"
     }
 }

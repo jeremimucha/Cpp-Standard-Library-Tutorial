@@ -23,7 +23,6 @@ int main()
     // shared_ptr<string> pJutta(new string("jutta"));
     // use make_shared<> to initialize the shared_ptr - safer and faster
     // avoids one allocation
-    // lambda is also passed as a deleter
     shared_ptr<string> pJutta{make_shared<string>("jutta")};
 
     // capitalize person names

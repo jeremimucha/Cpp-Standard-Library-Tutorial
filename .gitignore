@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# books
+*.pdf
+
+# downloaded example code folder
+cppstdlib-code/
