@@ -4,6 +4,7 @@
         "memory": "cpp",
         "random": "cpp",
         "xlocale": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "future": "cpp"
     }
 }
