@@ -45,8 +45,8 @@ int main()
               << p->mother->kids[0].lock()->name << std::endl;
     std::cout << "- nico's mom is shared " << p->mother.use_count() << " times" <<'\n'
               << "- nico's dad is shared " << p->father.use_count() << " times" <<'\n';
-// 'nico' is shared 3 times at this point (the 'p' ptr and pointers in mom's
-// and dad's kids vectors
+// 'nico' is refered to by weak_ptrs in mom and dad kids vectors
+// weak_ptrs don't prevent the object from being destroyed
 // mom and dad are refered to once by the 'nico' Person object
     p = initFamily("jim");
 // there are no more references to 'nico' object here, which also heald
