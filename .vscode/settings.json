@@ -5,6 +5,8 @@
         "random": "cpp",
         "xlocale": "cpp",
         "ostream": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "forward_list": "cpp",
+        "xstring": "cpp"
     }
 }
