@@ -7,6 +7,10 @@
         "ostream": "cpp",
         "future": "cpp",
         "forward_list": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "vector": "cpp"
     }
 }
