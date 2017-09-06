@@ -8,7 +8,7 @@ class backinserter
     : public std::iterator<std::output_iterator_tag, void,void,void,void>
 {
 public:
-    backinserter(Cont& coll)
+    explicit backinserter(Cont& coll)
         : coll_(coll)
         { }
     backinserter& operator*()
@@ -49,7 +49,7 @@ class frontinserter
     : public std::iterator<std::output_iterator_tag, void,void,void,void>
 {
 public:
-    frontinserter(Cont& coll)
+    explicit frontinserter(Cont& coll)
         : coll_(coll)
         { }
     frontinserter& operator*()
@@ -60,12 +60,12 @@ public:
         { return *this; }
     frontinserter& operator=(const typename Cont::value_type& val)
         {
-            coll_.push_back(val);
+            coll_.push_front(val);
             return *this;
         }
     frontinserter& operator=(typename Cont::value_type&& val)
         {
-            coll_.push_back(std::move(val));
+            coll_.push_front(std::move(val));
             return *this;
         }
 private:
@@ -84,7 +84,7 @@ class myinserter
     : public std::iterator<std::output_iterator_tag, void,void,void,void>
 {
 public:
-    myinserter(Cont& coll, typename Cont::iterator iter)
+    explicit myinserter(Cont& coll, typename Cont::iterator iter)
         : coll_(coll), pos(iter)
         { }
     myinserter& operator*()
