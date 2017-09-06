@@ -11,6 +11,7 @@
         "algorithm": "cpp",
         "deque": "cpp",
         "list": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xfunctional": "cpp"
     }
 }
