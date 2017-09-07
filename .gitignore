@@ -36,3 +36,6 @@
 
 # downloaded example code folder
 cppstdlib-code/
+
+# vscode config folder
+.vscode/
