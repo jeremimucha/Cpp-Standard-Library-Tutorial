@@ -1,5 +1,5 @@
 CFLAGS = -O2 -Wall -Wextra -pedantic -std=c++14 -IC:/msys64/mingw64/include \
--IC:/Users/muchajer/Documents/Cpp/Cpp-Standard-Library-Tutorial/incl -LC:/msys64/mingw64/lib
+-I../incl -LC:/msys64/mingw64/lib
 CXX = g++
 
 
