@@ -12,6 +12,7 @@
         "deque": "cpp",
         "list": "cpp",
         "vector": "cpp",
-        "xfunctional": "cpp"
+        "xfunctional": "cpp",
+        "regex": "cpp"
     }
 }
