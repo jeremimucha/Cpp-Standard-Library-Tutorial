@@ -1,0 +1,8 @@
+\chapter{The Standard Template Library}
+\index{STL}%
+\MAININDEX{standard template library}%
+\SEEINDEX{standard template library}{STL}%
+This is the basic chapter about the STL.
+\section{STL Components}
+\hauptindex{STL, introduction}%
+The \stl{} is based on the cooperation of
