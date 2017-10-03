@@ -34,6 +34,12 @@ int main()
             cout << "m.position(" << i <<"): " << m.position(i)
                  << endl;
         }
+        cout << "calling m[m.size()]:\n";
+        cout << "m[" << m.size() << "].empty():  " << m[m.size()].str().empty() << endl;
+        cout << "m[" << m.size() << "].str():    " << m[m.size()].str() << endl;
+        cout << "m.str(" << m.size() << "):      " << m.str( m.size() ) << endl;
+        cout << "m.position(" << m.size() << "): " << m.position( m.size() )
+             << endl;
 
         // iterating over all matches (using iterators):
         cout << "matches:" << endl;
