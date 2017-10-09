@@ -24,11 +24,18 @@ int queryNumber()
 
 void doSomething( char c, shared_future<int> f )
 {
+    int waitfor;
+    switch(c){
+        case '.': waitfor = 50; break;
+        case '+': waitfor = 100; break;
+        case '*': waitfor = 200; break;
+        default: waitfor = 500; break;
+    }
     try{
         // wait for number of characters to print
         int num = f.get();  // get result of queryNumber()
         for( int i=0; i<num; ++i ){
-            this_thread::sleep_for( chrono::milliseconds(111) );
+            this_thread::sleep_for( chrono::milliseconds(waitfor) );
             cout.put(c).flush();
         }
     }
@@ -51,10 +58,10 @@ int main()
         future<void> f3 = async( launch::async, doSomething, '*', f );
 
         // wait for all loops to be finished
-        std::cout << "before future1 is done" << std::endl;
+        std::cout << "\nbefore future1 is done" << std::endl;
         f1.get();
         // will execute after f1 returns
-        std::cout << "future 1 is done" << std::endl;
+        std::cout << "\nfuture 1 is done" << std::endl;
         f2.get();
         f3.get();
     }
