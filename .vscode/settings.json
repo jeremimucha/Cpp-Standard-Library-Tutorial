@@ -12,6 +12,9 @@
         "list": "cpp",
         "vector": "cpp",
         "xfunctional": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "xiosbase": "cpp",
+        "iostream": "cpp",
+        "thread": "cpp"
     }
 }
