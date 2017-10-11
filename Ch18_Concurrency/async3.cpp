@@ -26,14 +26,15 @@ int main()
 {
     cout << "starting 2 operations asynchronously" << endl;
     future<void> f1 = async( [](){ doSomething('.'); } );
-    future<void> f2 = async( [](){ doSomething('+'); } );
+    // future<void> f2 = async( [](){ doSomething('+'); } );
+    future<void> f2 = async( doSomething, '+' );
 
     // if at least one of the background tasks is running
     if( f1.wait_for(chrono::seconds(0)) != future_status::deferred ||
         f2.wait_for(chrono::seconds(0)) != future_status::deferred ){
         // poll until at least one of the loops finished
-        while( f1.wait_for( chrono::seconds(0)) != future_status::ready &&
-               f2.wait_for( chrono::seconds(0)) != future_status::ready ){
+        while( f1.wait_for(chrono::seconds(0)) != future_status::ready &&
+               f2.wait_for(chrono::seconds(0)) != future_status::ready ){
             // ...
             this_thread::yield();   // hint to reschedule to the next thread
         }
