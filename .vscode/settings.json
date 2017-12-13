@@ -15,6 +15,9 @@
         "regex": "cpp",
         "xiosbase": "cpp",
         "iostream": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "system_error": "cpp",
+        "xlocmon": "cpp",
+        "xtr1common": "cpp"
     }
 }
